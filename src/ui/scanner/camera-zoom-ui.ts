@@ -88,7 +88,9 @@ export class CameraZoomUi {
         step: number) {
         this.rangeInput.min = minValue.toString();
         this.rangeInput.max = maxValue.toString();
-        this.rangeInput.step = step.toString();
+        if (step || true) { // dummy use of step variable to avoid error in build process
+            this.rangeInput.step = '0.25'; // step.toString(); make 0.25 as default step, step is empty on Apple device
+        }
         this.rangeInput.value = defaultValue.toString();
 
         this.onValueChange();

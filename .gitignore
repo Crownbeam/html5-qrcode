@@ -7,3 +7,5 @@ src/*.d.ts
 src/*/*.d.ts
 src/*/*/*.d.ts
 docs/
+**/*.js
+**/*.js.map
